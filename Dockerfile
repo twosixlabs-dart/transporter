@@ -1,13 +1,10 @@
-FROM docker.causeex.com/dart/centos-python3:latest
+FROM python:3.9
 
 LABEL maintainer="yan.zverev@twosixlabs.com, michael.reynolds@twosixlabs.com, nicholas.sanchirico@twosixlabs.com"
 
-RUN yum -y update
-RUN yum -y install zip && \
-    yum -y install vim && \
-    yum -y install openssl && \
-    yum clean all && \
-    rm -r -f /var/cache/yum
+RUN apt-get update
+RUN apt-get -y install zip vim openssl && \
+    apt-get clean all
 
 ENV PYTHONUNBUFFERED true
 ENV LADLE_HOST "localhost"
