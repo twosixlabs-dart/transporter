@@ -1,0 +1,6 @@
+*.yml
+target
+*.egg-info
+__pycache__
+venv
+data

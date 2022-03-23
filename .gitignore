@@ -1,0 +1,14 @@
+*.pyc
+__pycache__
+*.egg-info
+.eggs
+build
+dist
+
+venv
+target
+data
+
+.DS_Store
+.idea
+.vscode
